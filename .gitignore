@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv
+
+# --- Quarto ---
+/.quarto/
+_site/
+*_files/
+*_cache/
+
+# 単一ファイル出力時の生成物
+*.html
+
+# --- VS Code / OS ---
+.vscode/
+.DS_Store
+Thumbs.db

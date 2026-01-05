@@ -1,0 +1,60 @@
+---
+title: "Quarto Environment Setup Check"
+format: 
+  html:
+    embed-resources: true # １ファイル内に全要素インクルード
+    code-fold: true # プログラムコードを折りたたむかどうか
+    theme: minty # テーマの名前（Bootswatch: https://bootswatch.com/）
+    title-block-banner: true # タイトルの背景をテーマに合わせてブロック化
+---
+
+## 1. Python Environment Check
+
+現在稼働しているPythonのバージョンとパスを確認します。`uv` で作成した `.venv` が使われていれば成功です。
+
+```{python}
+import sys
+import os
+
+print(f"Python Version: {sys.version}")
+print(f"Executable Path: {sys.executable}")
+```
+
+## 2. Package & Plotting Check
+
+`matplotlib` を使用してグラフを描画します。画像がインラインで表示されれば正常です。
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# データの生成
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# プロット
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, label='sin(x)', color='blue')
+plt.title('Environment Test Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+## 3. Table Check
+
+`pandas` データフレームの表示確認です。
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame({
+    "Component": ["Quarto", "Python", "uv", "VS Code"],
+    "Status": ["Installed", "Active", "Managed", "Configured"],
+    "Version Check": ["OK", "OK", "OK", "OK"]
+})
+
+df
+```
