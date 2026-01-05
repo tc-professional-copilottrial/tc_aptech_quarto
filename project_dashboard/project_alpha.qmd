@@ -1,0 +1,82 @@
+---
+title: "Project Alpha"        # <-- 表の「Project Name」になります
+subtitle: "Sato"                # <-- 表の「Lead」になります
+description: "AI導入検証中"    # <-- 表の「Description」になります
+categories: ["AI", "Active"]  # <-- カテゴリ分けに使えます
+
+status: active
+date: "2026-01-05"
+orientation: columns
+jupyter: python3
+---
+
+
+::: {.callout-note appearance="simple"}
+# {{< meta title >}} {{< meta portal_title >}} 
+
+**Status:** {{< meta status >}} | **Updated:** {{< meta date >}}
+:::
+
+## Column {width=40%}
+
+### Project Details
+
+- **Client:** Internal
+- **Deadline:** 2026-03-31
+- **Budget:** ¥10M
+
+::: {.callout-note}
+現在のフェーズは「モデル検証」です。来週から結合テストを開始予定。
+:::
+
+### Key Metrics
+
+```{python}
+#| title: Budget Consumption
+import matplotlib.pyplot as plt
+
+sizes = [70, 30]
+labels = ['Used', 'Remaining']
+colors = ['#3498db', '#ecf0f1']
+
+plt.figure(figsize=(4, 4))
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
+plt.show()
+```
+
+## Column {width=60%}
+
+### Timeline & Progress
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# ガントチャート風のデータ
+df = pd.DataFrame({
+    'Task': ['Planning', 'Development', 'Testing', 'Deploy'],
+    'Start': [1, 3, 6, 8],
+    'Duration': [2, 3, 2, 1]
+})
+
+plt.figure(figsize=(8, 4))
+plt.barh(df['Task'], df['Duration'], left=df['Start'], color='skyblue')
+plt.xlabel('Week')
+plt.grid(axis='x', linestyle='--')
+plt.title('Project Schedule')
+plt.show()
+```
+
+### Recent Updates (Tabset)
+
+::: {.panel-tabset}
+
+#### Update 1/5
+- モデルの学習が完了しました。
+- 精度は95%を達成。
+
+#### Update 12/28
+- データクレンジング完了。
+- GPUサーバの構築完了。
+
+:::

@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: _site
+execute:
+  keep-ipynb: false
+format:
+  dashboard:
+    theme: minty
+    embed-resources: false # １ファイル内に全要素インクルード
+    nav-buttons: 
+      - icon: house-fill       # アイコン名 (Bootstrap Icons)
+        href: index.html        # リンク先
+        aria-label: Top        # マウスホバー時などの説明
+      - github
+portal_title: "My Dashboard System"
+
+
+

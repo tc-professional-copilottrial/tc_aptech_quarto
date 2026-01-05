@@ -1,0 +1,63 @@
+---
+title: "Project Portfolio Overview"
+format: 
+  dashboard:
+    title-block-banner: true # タイトルの背景をテーマに合わせてブロック化
+listing:
+  id: project-listing
+  contents: "*.qmd"
+  include:
+    status: "active"
+  type: table
+  sort-ui: false        # 「並び替え」メニューを消す
+  filter-ui: false      # 「検索バー（Search）」を消す
+  categories: false     # 「カテゴリ」表示を消す（行内のカテゴリは残ります）
+  fields: [title, author, description, categories]
+  field-display-names:
+    title: "Project Name"
+    author: "Lead"
+---
+<style>
+/* リストテーブルのヘッダーを強制的に太字にする設定 */
+.quarto-listing-table th {
+    font-weight: bold !important;
+}
+</style>
+
+## Row {height=30%}
+
+::: {.valuebox icon="briefcase" color="primary"}
+Active Projects
+3
+:::
+
+::: {.valuebox icon="exclamation-triangle" color="danger"}
+Critical Issues
+1
+:::
+
+::: {.valuebox icon="check-circle" color="success"}
+Completed This Month
+5
+:::
+
+## Row {height=50%}
+
+### Project List
+
+::: {#project-listing}
+:::
+
+
+
+## Row {height=70%}
+
+### Projects List
+
+| Project | Lead | Status | Progress |
+|:---|:---|:---|:---|
+| **Project Alpha** | Sato | <span class="badge bg-success">On Track</span> | 85% |
+| **Project Beta** | Tanaka | <span class="badge bg-danger">Delayed</span> | 40% |
+| **Project Gamma** | Suzuki | <span class="badge bg-warning">Review</span> | 90% |
+
+: Active Projects Status {tbl-colwidths="[40,20,20,20]"}

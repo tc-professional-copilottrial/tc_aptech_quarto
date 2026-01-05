@@ -12,9 +12,11 @@ wheels/
 
 # --- Quarto ---
 /.quarto/
+**/*.quarto_ipynb
 _site/
 *_files/
 *_cache/
+*/.gitignore
 
 # 単一ファイル出力時の生成物
 *.html
