@@ -18,6 +18,7 @@ _site/
 
 # 単一ファイル出力時の生成物
 *.html
+_output/
 
 # --- VS Code / OS ---
 .vscode/

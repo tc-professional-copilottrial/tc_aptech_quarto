@@ -1,0 +1,11 @@
+project:
+  type: default
+
+execute:
+  keep-ipynb: false
+
+format:
+  html:
+    theme: minty
+    embed-resources: true # １ファイル内に全要素インクルード
+    toc: true

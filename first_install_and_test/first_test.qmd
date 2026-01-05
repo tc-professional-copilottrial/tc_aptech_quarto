@@ -2,9 +2,7 @@
 title: "Quarto Environment Setup Check"
 format: 
   html:
-    embed-resources: true # １ファイル内に全要素インクルード
     code-fold: true # プログラムコードを折りたたむかどうか
-    theme: minty # テーマの名前（Bootswatch: https://bootswatch.com/）
     title-block-banner: true # タイトルの背景をテーマに合わせてブロック化
 ---
 
